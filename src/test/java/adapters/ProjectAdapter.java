@@ -7,17 +7,13 @@ public class ProjectAdapter extends BaseAdapter {
 
         return get(ENDPOINT, statusCode);
     }
-
     public String createProject(int statusCode, String requestBody) {
         return post(ENDPOINT, statusCode, requestBody);
     }
-
-    public String getProjectByCode(int statusCode, String projectCode) {
+    public String getProjectByCode(int statusCode, String projectCode){
         return get(ENDPOINT + "/" + projectCode, statusCode);
     }
-
-    public String deleteProjectByCode() {
-        return null;
+    public String deleteProjectByCode(int statusCode, String projectCode){
+        return delete(ENDPOINT + "/" + projectCode, statusCode);
     }
-
 }

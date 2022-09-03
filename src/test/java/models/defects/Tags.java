@@ -1,10 +1,8 @@
-package models;
-
+package models.defects;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-public class Result {
-    String code;
+public class Tags {
 }
