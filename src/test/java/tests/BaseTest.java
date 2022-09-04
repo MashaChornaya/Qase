@@ -9,6 +9,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
         import org.testng.ITestContext;
         import org.testng.annotations.*;
         import java.util.concurrent.TimeUnit;
+
+import static com.codeborne.selenide.Selenide.open;
+
 @Log4j2
 
 public class BaseTest {
@@ -35,7 +38,7 @@ public class BaseTest {
     @BeforeMethod(description = "navigate")
     public void navigate(){
         log.debug("Page opened");
-        driver.get("http://prestashop.qatestlab.com.ua/en/");
+        driver.get("https://app.qase.io/login");
     }
     @AfterMethod(alwaysRun = true, description = "close browser")
     public void clearCookies() {
